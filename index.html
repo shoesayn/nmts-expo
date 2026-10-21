@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="株式会社西原マシンツール（愛媛県新居浜市）の会社紹介。工作機械・鍛圧機械の導入・修理・移設・処分。">
+<title>西原マシンツール</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+/* Layout: one narrow column (phone-first), sticky top bar, sections separated by tone, photos in swipe strips */
+:root{
+  --bg:#ffffff; --fg:#1b2430; --muted:#566273; --line:#d8e6f6; --tint:#eaf4fe;
+  --navy:#1e6fd1; --onnavy:#ffffff; --accent:#e8711a; --accent-fg:#ffffff;
+  --sym:#b3362a; --sym-bg:#fbefed; --cause:#9a6a12; --cause-bg:#fbf4e4; --fix:#2a7a4c; --fix-bg:#e9f5ee;
+  --font:"BIZ UDPGothic","Hiragino Sans","Hiragino Kaku Gothic ProN","Meiryo",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10161f; --fg:#e7ecf3; --muted:#9aa6b6; --line:#263244; --tint:#18212d;
+  --navy:#2563b8; --onnavy:#ffffff; --accent:#f08a3e; --accent-fg:#1b1206;
+  --sym:#f08b7f; --sym-bg:#2a1a19; --cause:#e7b75a; --cause-bg:#2a2314; --fix:#6fd09a; --fix-bg:#14271d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10161f; --fg:#e7ecf3; --muted:#9aa6b6; --line:#263244; --tint:#18212d;
+  --navy:#2563b8; --onnavy:#ffffff; --accent:#f08a3e; --accent-fg:#1b1206;
+  --sym:#f08b7f; --sym-bg:#2a1a19; --cause:#e7b75a; --cause-bg:#2a2314; --fix:#6fd09a; --fix-bg:#14271d; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:16px;line-height:1.75;-webkit-text-size-adjust:100%}
+.wrap{max-width:720px;margin:0 auto;padding-inline:18px}
+a{color:inherit}
+h1,h2,h3{text-wrap:balance;line-height:1.4;margin:0}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--navy);color:var(--onnavy)}
+.bar .wrap{display:flex;align-items:center;gap:10px;min-height:56px}
+.logo{flex:none;width:36px;height:36px;border-radius:50%;background:#bfe9ff;border:2px solid #3b82f6;color:#1f3a5f;font:700 11px/32px var(--font);text-align:center;letter-spacing:.04em}
+.bar .nm{font-weight:700;font-size:15px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.callbtn{flex:none;background:var(--accent);color:var(--accent-fg);text-decoration:none;font-weight:700;font-size:14px;padding:8px 14px;border-radius:999px}
+.hero{background:var(--navy);color:var(--onnavy);padding-block:22px 26px}
+.hero .lead{font-size:clamp(22px,6.4vw,30px);font-weight:700;white-space:pre-line;margin:0 0 6px}
+.hero .sub{color:#eef5fe;font-size:14px;margin:0 0 18px}
+.hero figure{margin:0 0 18px;border-radius:10px;overflow:hidden;aspect-ratio:16/10;max-width:100%}
+.hero figure img{width:100%;height:100%;object-fit:cover;display:block}
+.quick{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.quick a{display:flex;flex-direction:column;justify-content:center;min-height:62px;padding:10px 14px;border-radius:10px;text-decoration:none;background:rgba(255,255,255,.1);color:#fff;font-weight:700;font-size:15px;line-height:1.35}
+.quick a small{font-weight:400;font-size:12px;color:#e3eefc}
+.quick a.primary{background:var(--accent);color:var(--accent-fg)}
+.quick a.primary small{color:inherit;opacity:.85}
+nav.chips{position:sticky;top:calc(56px + env(safe-area-inset-top,0px));z-index:4;background:var(--bg);border-bottom:1px solid var(--line)}
+nav.chips .wrap{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+nav.chips .wrap::-webkit-scrollbar{display:none}
+nav.chips a{flex:none;display:inline-flex;align-items:center;gap:6px;min-height:40px;text-decoration:none;font-size:14.5px;font-weight:700;color:var(--onnavy);background:var(--navy);padding:8px 12px 8px 14px;border-radius:8px;box-shadow:0 3px 0 rgba(0,0,0,.28);transition:transform .08s,box-shadow .08s;-webkit-tap-highlight-color:transparent}
+nav.chips a::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);opacity:.85}
+nav.chips a:active{transform:translateY(3px);box-shadow:0 0 0 rgba(0,0,0,0)}
+nav.chips a.go-contact{background:var(--accent);color:var(--accent-fg)}
+nav.chips .wrap{padding-block:10px 13px;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+section{padding-block:34px}
+section+section{border-top:1px solid var(--line)}
+section.tone{background:var(--tint)}
+.eyebrow{display:block;color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.08em;margin-bottom:4px}
+.sec-title{display:block;background:var(--navy);color:var(--onnavy);font-size:clamp(20px,5.8vw,24px);font-weight:700;line-height:1.35;padding:12px 16px;border-radius:10px;margin:0 0 14px;letter-spacing:.02em}
+.contact .sec-title{background:var(--onnavy);color:var(--navy)}
+h2{font-size:clamp(18px,4.8vw,21px);margin-bottom:12px}
+h3{font-size:18px;margin:22px 0 8px}
+p{margin:0 0 12px}
+.muted{color:var(--muted);font-size:14px}
+.strip{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;margin-inline:-18px;padding-inline:18px;scroll-padding-inline:18px}
+.strip figure{flex:0 0 72%;max-width:340px;margin:0;scroll-snap-align:start}
+.strip img{width:100%;aspect-ratio:4/3;object-fit:contain;border-radius:8px;display:block;background:var(--tint)}
+.strip figcaption{font-size:13.5px;font-weight:700;color:var(--fg);text-align:center;line-height:1.45;margin-top:6px}
+.hint{font-size:12px;color:var(--muted);margin:-2px 0 8px}
+.pillars{display:grid;gap:12px}
+.pillar{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.pillar h3{margin:0 0 6px;color:var(--navy);font-size:18px}
+:root[data-theme="dark"] .pillar h3{color:var(--fg)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pillar h3{color:var(--fg)}}
+.pillar ul{margin:0;padding-left:1.2em}
+.flow{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 0;padding:0;list-style:none}
+.flow li{background:var(--navy);color:var(--onnavy);font-weight:700;font-size:14px;padding:6px 12px;border-radius:6px}
+.flow li+li::before{content:"→ ";opacity:.6}
+.case{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--bg);overflow:hidden}
+.case summary{list-style:none;display:flex;align-items:center;gap:12px;padding:10px 12px;cursor:pointer}
+.case summary::-webkit-details-marker{display:none}
+.case summary:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.thumb{width:56px;height:56px;object-fit:cover;border-radius:8px;flex:none}
+.cn{color:var(--accent);font-weight:700;font-size:18px;flex:none}
+.ct{flex:1;min-width:0;font-weight:700;font-size:15px;line-height:1.45}
+.chev{flex:none;width:10px;height:10px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);margin-right:4px;transition:transform .2s}
+.case[open] .chev{transform:rotate(225deg)}
+.case-body{padding:4px 14px 14px}
+.case-body .strip figure{flex-basis:46%;max-width:200px}
+.case-body .strip img{aspect-ratio:3/4}
+dl{margin:8px 0 0;display:grid;gap:8px}
+dl div{border-radius:8px;padding:10px 12px}
+dt{font-weight:700;font-size:13px;margin-bottom:2px}
+dd{margin:0;font-size:15px}
+.sym{background:var(--sym-bg)}.sym dt{color:var(--sym)}
+.cause{background:var(--cause-bg)}.cause dt{color:var(--cause)}
+.fix{background:var(--fix-bg)}.fix dt{color:var(--fix)}
+.philo{background:var(--bg);border-left:0;border-radius:12px;padding:16px 18px;font-weight:700;font-size:16px;line-height:1.9;margin:0 0 18px;border:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:9px 0;border-bottom:1px solid var(--line)}
+th{width:6.5em;color:var(--muted);font-weight:700;padding-right:10px}
+.contact{background:var(--navy);color:var(--onnavy)}
+.contact .eyebrow-unused{color:#ffe08a}
+.needs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 20px;padding:0;list-style:none}
+.needs li{background:rgba(255,255,255,.08);border-radius:8px;padding:10px 12px;font-size:14px;line-height:1.5}
+.cline{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.cline .k{width:4em;flex:none;color:#e3eefc;font-size:13px}
+.cline .v{flex:1;min-width:0;font-size:18px;font-weight:700;overflow-wrap:anywhere;user-select:all}
+.cline a.v{text-decoration:none}
+.copy{flex:none;font:700 13px var(--font);background:rgba(255,255,255,.14);color:#fff;border:0;border-radius:999px;padding:7px 12px;cursor:pointer}
+.copy:focus-visible,.quick a:focus-visible,nav.chips a:focus-visible,.callbtn:focus-visible{outline:3px solid #ffe08a;outline-offset:2px}
+.addr{margin-top:16px;font-size:14px;color:#e3eefc}
+.addr a{color:#fff}
+footer{padding-block:20px;font-size:12px;color:var(--muted);text-align:center}
+@media (min-width:640px){.pillars{grid-template-columns:repeat(3,1fr)}.strip figure{flex-basis:44%}.needs{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body style="margin:0">
+
+
+<header class="bar"><div class="wrap"><div class="logo" aria-hidden="true">NMT</div><div class="nm">株式会社 西原マシンツール</div><a class="callbtn" href="tel:0897460064">電話する</a></div></header>
+
+<div class="hero"><div class="wrap">
+  <p class="lead">工作機械の
+導入・修理・移設・処分を
+新居浜からワンストップで</p>
+  <p class="sub">愛媛県新居浜市・創業 昭和59年。新品機械・中古機械の販売から、修理・移設・処分まで。</p>
+  <figure><img src="p/s14_03.jpg" alt="大型機械の移設作業" loading="lazy" decoding="async"></figure>
+  <div class="quick">
+    <a class="primary" href="#repair">修理事例を見る<small>全11件・写真つき</small></a>
+    <a href="#contact">お問い合わせ<small>0897-46-0064</small></a>
+  </div>
+</div></div>
+
+<nav class="chips" aria-label="ページ内メニュー"><div class="wrap">
+  <a href="#pillars">業務紹介</a><a href="#new">新品機械</a><a href="#used">中古機械</a><a href="#repair">修理事例</a><a href="#move">移設・処分</a><a href="#about">会社概要</a><a href="#contact" class="go-contact">お問い合わせ</a>
+</div></nav>
+
+<main>
+<section id="pillars" class="tone"><div class="wrap">
+  <div class="sec-title" role="heading" aria-level="2">業務紹介</div>
+  <h2>設備の導入から保全・移設・処分まで、ワンストップで</h2>
+  <div class="pillars">
+    <div class="pillar"><h3>新品機械販売部</h3><ul><li>標準機販売</li><li>ラインセット販売</li><li>専用設計機販売</li><li>自動化システム</li></ul></div><div class="pillar"><h3>サービスエンジニア部</h3><ul><li>修理・保守点検</li><li>移設・レイアウト変更</li><li>設備の処分・撤去</li><li>静的精度測定</li><li>設備補器の製作</li></ul></div><div class="pillar"><h3>中古部（販売・買取）</h3><ul><li>設備の査定・買取・下取り</li><li>在庫品の販売</li><li>中古ネットワークから取寄せ</li><li>オークション出品・入札</li></ul></div>
+  </div>
+  <ol class="flow" aria-label="設備のライフサイクル"><li>導入</li><li>保全・修理</li><li>移設</li><li>処分・買取</li></ol>
+</div></section>
+
+<section id="new"><div class="wrap">
+  <div class="sec-title" role="heading" aria-level="2">新品機械販売</div>
+  <h2>標準機からラインセット、専用機、自動化まで</h2>
+  <p class="hint">← 写真は横にスワイプできます</p>
+  <h3>工作機械（NC旋盤・マシニングセンタ）</h3>
+  <div class="strip" role="list" aria-label="工作機械"><figure role="listitem"><img src="p/s04_00.jpg" alt="DMGMORI Y軸付CNC旋盤" loading="lazy" decoding="async"><figcaption>DMGMORI Y軸付CNC旋盤</figcaption></figure><figure role="listitem"><img src="p/s04_01.jpg" alt="ヤマザキマザック CNC旋盤" loading="lazy" decoding="async"><figcaption>ヤマザキマザック CNC旋盤</figcaption></figure><figure role="listitem"><img src="p/s04_02.jpg" alt="ヤマザキマザック 複合加工機" loading="lazy" decoding="async"><figcaption>ヤマザキマザック 複合加工機</figcaption></figure><figure role="listitem"><img src="p/s04_03.jpg" alt="ヤマザキマザック立形マシニングセンタ" loading="lazy" decoding="async"><figcaption>ヤマザキマザック立形マシニングセンタ</figcaption></figure><figure role="listitem"><img src="p/s04_04.jpg" alt="オークマCNC旋盤" loading="lazy" decoding="async"><figcaption>オークマCNC旋盤</figcaption></figure><figure role="listitem"><img src="p/s04_05.jpg" alt="ヤマザキマザック 5軸マシニングセンタ" loading="lazy" decoding="async"><figcaption>ヤマザキマザック 5軸マシニングセンタ</figcaption></figure></div>
+  <h3>小型機・汎用機</h3>
+  <div class="strip" role="list" aria-label="小型機・汎用機"><figure role="listitem"><img src="p/s05_04.jpg" alt="ブラザー＃30立形マシニングセンタ" loading="lazy" decoding="async"><figcaption>ブラザー＃30立形マシニングセンタ</figcaption></figure><figure role="listitem"><img src="p/s05_05.jpg" alt="ブラザー2APC＃30立形マシニングセンタ" loading="lazy" decoding="async"><figcaption>ブラザー2APC＃30立形マシニングセンタ</figcaption></figure><figure role="listitem"><img src="p/s05_03.jpg" alt="ヤマザキマザック＃40立形マシニングセンタ" loading="lazy" decoding="async"><figcaption>ヤマザキマザック＃40立形マシニングセンタ</figcaption></figure><figure role="listitem"><img src="p/s05_00.jpg" alt="山崎技研＃50ATC付立フライス" loading="lazy" decoding="async"><figcaption>山崎技研＃50ATC付立フライス</figcaption></figure><figure role="listitem"><img src="p/s05_01.jpg" alt="大日金属工業簡易CNC旋盤" loading="lazy" decoding="async"><figcaption>大日金属工業簡易CNC旋盤</figcaption></figure><figure role="listitem"><img src="p/s05_02.jpg" alt="TAKISAWA簡易CNC旋盤" loading="lazy" decoding="async"><figcaption>TAKISAWA簡易CNC旋盤</figcaption></figure></div>
+  <h3>大型機械</h3>
+  <p>ロール旋盤・ロール研削盤・大型横中ぐり盤等、大型機械の販売実績多数。</p>
+  <div class="strip" role="list" aria-label="大型機械"><figure role="listitem"><img src="p/s06_00.jpg" alt="倉敷機械テーブル横中ぐり盤" loading="lazy" decoding="async"><figcaption>倉敷機械テーブル横中ぐり盤</figcaption></figure><figure role="listitem"><img src="p/s06_01.jpg" alt="唐津プレシジョンロール旋盤" loading="lazy" decoding="async"><figcaption>唐津プレシジョンロール旋盤</figcaption></figure><figure role="listitem"><img src="p/s06_02.jpg" alt="シギヤテーブルタイプ円筒研削盤" loading="lazy" decoding="async"><figcaption>シギヤテーブルタイプ円筒研削盤</figcaption></figure><figure role="listitem"><img src="p/s06_03.jpg" alt="オーエム製作所CNC立旋盤" loading="lazy" decoding="async"><figcaption>オーエム製作所CNC立旋盤</figcaption></figure><figure role="listitem"><img src="p/s06_04.jpg" alt="唐津プレシジョンロール研削盤" loading="lazy" decoding="async"><figcaption>唐津プレシジョンロール研削盤</figcaption></figure><figure role="listitem"><img src="p/s06_05.jpg" alt="倉敷機械フロア型横中ぐり盤" loading="lazy" decoding="async"><figcaption>倉敷機械フロア型横中ぐり盤</figcaption></figure></div>
+  <h3>鍛圧・切断機械／測定器</h3>
+  <div class="strip" role="list" aria-label="鍛圧・切断機械／測定器"><figure role="listitem"><img src="p/s07_01.jpg" alt="大東精機ロータリーバンドソー" loading="lazy" decoding="async"><figcaption>大東精機ロータリーバンドソー</figcaption></figure><figure role="listitem"><img src="p/s07_00.jpg" alt="関西鐵工所ギャップシャー" loading="lazy" decoding="async"><figcaption>関西鐵工所ギャップシャー</figcaption></figure><figure role="listitem"><img src="p/s07_02.jpg" alt="万陽1000Ｔレバープレス" loading="lazy" decoding="async"><figcaption>万陽1000Ｔレバープレス</figcaption></figure><figure role="listitem"><img src="p/s08_01.jpg" alt="長浜製作所バランシングマシン" loading="lazy" decoding="async"><figcaption>長浜製作所バランシングマシン</figcaption></figure><figure role="listitem"><img src="p/s08_00.jpg" alt="東京精密CNC3次元測定器" loading="lazy" decoding="async"><figcaption>東京精密CNC3次元測定器</figcaption></figure></div>
+  <h3>自動化システム</h3>
+  <p>ロボット・周辺装置と工作機械の組み合わせを、機械選定からご提案します。</p>
+  <div class="strip" role="list" aria-label="自動化システム"><figure role="listitem"><img src="p/s09_00.jpg" alt="ヤマザキマザック協働ロボット" loading="lazy" decoding="async"><figcaption>ヤマザキマザック協働ロボット</figcaption></figure><figure role="listitem"><img src="p/s09_01.jpg" alt="フランジ自動加工ライン" loading="lazy" decoding="async"><figcaption>フランジ自動加工ライン</figcaption></figure><figure role="listitem"><img src="p/s09_02.jpg" alt="フランジ自動加工ライン" loading="lazy" decoding="async"><figcaption>フランジ自動加工ライン</figcaption></figure></div>
+  <h3>専用設計機</h3>
+  <p>標準機では対応できない作業に、専用機を！</p>
+  <div class="strip" role="list" aria-label="専用設計機"><figure role="listitem"><img src="p/p9_4.jpg" alt="機上ロール回転機" loading="lazy" decoding="async"><figcaption>機上ロール回転機</figcaption></figure><figure role="listitem"><img src="p/p9_1.jpg" alt="機上ロール回転機" loading="lazy" decoding="async"><figcaption>機上ロール回転機</figcaption></figure><figure role="listitem"><img src="p/p9_2.jpg" alt="グリス自動充てん機" loading="lazy" decoding="async"><figcaption>グリス自動充てん機</figcaption></figure><figure role="listitem"><img src="p/p9_3.jpg" alt="据えぐり機" loading="lazy" decoding="async"><figcaption>据えぐり機</figcaption></figure></div>
+</div></section>
+
+<section id="used" class="tone"><div class="wrap">
+  <div class="sec-title" role="heading" aria-level="2">中古部（販売・買取）</div>
+  <h2>使わなくなった設備の買取から、中古機の調達まで</h2>
+  <ul><li>設備の査定・買取・下取り</li><li>在庫品の販売</li><li>中古ネットワークから取寄せ</li><li>オークション出品・入札</li></ul>
+  <p class="muted">古物商許可番号：愛媛県公安委員会 第821020000932号</p>
+  <div class="strip" role="list" aria-label="中古機械"><figure role="listitem"><img src="p/s11_01.jpg" alt="在庫品販売" loading="lazy" decoding="async"><figcaption>在庫品販売</figcaption></figure><figure role="listitem"><img src="p/s11_02.jpg" alt="在庫品販売" loading="lazy" decoding="async"><figcaption>在庫品販売</figcaption></figure><figure role="listitem"><img src="p/s11_00.jpg" alt="オークション会場（マシンセンター広島）" loading="lazy" decoding="async"><figcaption>オークション会場（マシンセンター広島）</figcaption></figure></div>
+</div></section>
+
+<section id="repair"><div class="wrap">
+  <div class="sec-title" role="heading" aria-level="2">サービスエンジニア部<br>修理事例</div>
+  <h2>メーカー廃業機・古い機械・海外製機械も直します</h2>
+  <p class="muted">タップすると写真と「症状・原因・対応」が開きます。保守点検・静的精度測定・設備補器の製作も承ります。</p>
+  <details class="case" id="case1">
+  <summary><img src="p/s17_00.jpg" alt="NC旋盤 刃物台タレット衝突による精度不良の改善" loading="lazy" decoding="async" class="thumb"><span class="cn">①</span><span class="ct">NC旋盤 刃物台タレット衝突による精度不良の改善</span><span class="chev" aria-hidden="true"></span></summary>
+  <div class="case-body">
+    <div class="strip" role="list" aria-label="NC旋盤 刃物台タレット衝突による精度不良の改善"><figure role="listitem"><img src="p/s17_00.jpg" alt="NC旋盤 刃物台タレット衝突による精度不良の改善" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s17_01.jpg" alt="NC旋盤 刃物台タレット衝突による精度不良の改善" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s17_02.jpg" alt="NC旋盤 刃物台タレット衝突による精度不良の改善" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s17_03.jpg" alt="NC旋盤 刃物台タレット衝突による精度不良の改善" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s17_04.jpg" alt="NC旋盤 刃物台タレット衝突による精度不良の改善" loading="lazy" decoding="async"></figure></div>
+    <dl><div class="sym"><dt>症状</dt><dd>タレットが衝突した後、加工精度が出なくなった</dd></div><div class="cause"><dt>原因</dt><dd>衝突でカービック（位置決め歯）が動いた可能性</dd></div><div class="fix"><dt>対応</dt><dd>位置決めピンを確認（損傷なし）し、カービックを打ち込み直し。主軸に対する刃物台の直角度を修正し、ボーリングホルダで基準芯を出して微調整</dd></div></dl>
+  </div>
+</details>
+<details class="case" id="case2">
+  <summary><img src="p/s18_00.jpg" alt="NC旋盤 X軸ボールねじ交換" loading="lazy" decoding="async" class="thumb"><span class="cn">②</span><span class="ct">NC旋盤 X軸ボールねじ交換</span><span class="chev" aria-hidden="true"></span></summary>
+  <div class="case-body">
+    <div class="strip" role="list" aria-label="NC旋盤 X軸ボールねじ交換"><figure role="listitem"><img src="p/s18_00.jpg" alt="NC旋盤 X軸ボールねじ交換" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s18_01.jpg" alt="NC旋盤 X軸ボールねじ交換" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s18_02.jpg" alt="NC旋盤 X軸ボールねじ交換" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s18_03.jpg" alt="NC旋盤 X軸ボールねじ交換" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s18_04.jpg" alt="NC旋盤 X軸ボールねじ交換" loading="lazy" decoding="async"></figure></div>
+    <dl><div class="sym"><dt>症状</dt><dd>バックラッシュが過大になった</dd></div><div class="cause"><dt>原因</dt><dd>水溶性切削油がボールねじ付近に入り込んでヘドロ化し、錆・腐食が発生</dd></div><div class="fix"><dt>対応</dt><dd>新品のボールねじに交換</dd></div></dl>
+  </div>
+</details>
+<details class="case" id="case3">
+  <summary><img src="p/s19_00.jpg" alt="汎用旋盤（メーカー廃業）送り変速シフト軸の新作" loading="lazy" decoding="async" class="thumb"><span class="cn">③</span><span class="ct">汎用旋盤（メーカー廃業）送り変速シフト軸の新作</span><span class="chev" aria-hidden="true"></span></summary>
+  <div class="case-body">
+    <div class="strip" role="list" aria-label="汎用旋盤（メーカー廃業）送り変速シフト軸の新作"><figure role="listitem"><img src="p/s19_00.jpg" alt="汎用旋盤（メーカー廃業）送り変速シフト軸の新作" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s19_01.jpg" alt="汎用旋盤（メーカー廃業）送り変速シフト軸の新作" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s19_02.jpg" alt="汎用旋盤（メーカー廃業）送り変速シフト軸の新作" loading="lazy" decoding="async"></figure></div>
+    <dl><div class="sym"><dt>症状</dt><dd>ギヤの歯が欠損</dd></div><div class="cause"><dt>原因</dt><dd>加工中の衝突と推測</dd></div><div class="fix"><dt>対応</dt><dd>欠けた歯を溶接で肉盛りし、歯当たりを調整して組込み。シャフトは新規に製作して交換</dd></div></dl>
+  </div>
+</details>
+<details class="case" id="case4">
+  <summary><img src="p/s20_00.jpg" alt="チップコンベア修理" loading="lazy" decoding="async" class="thumb"><span class="cn">④</span><span class="ct">チップコンベア修理</span><span class="chev" aria-hidden="true"></span></summary>
+  <div class="case-body">
+    <div class="strip" role="list" aria-label="チップコンベア修理"><figure role="listitem"><img src="p/s20_00.jpg" alt="チップコンベア修理" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s20_01.jpg" alt="チップコンベア修理" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s20_02.jpg" alt="チップコンベア修理" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s20_03.jpg" alt="チップコンベア修理" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s20_04.jpg" alt="チップコンベア修理" loading="lazy" decoding="async"></figure></div>
+    <dl><div class="sym"><dt>症状</dt><dd>ローラーが摺動するレールガイドが千切れて欠損。本体にも穴あきが多数</dd></div><div class="fix"><dt>対応</dt><dd>穴の開いた箇所にパッチ板を当てて溶接補修</dd></div></dl>
+  </div>
+</details>
+<details class="case" id="case5">
+  <summary><img src="p/s21_00.jpg" alt="中ぐり盤 鋳物製コラムトップカバーの溶接補修" loading="lazy" decoding="async" class="thumb"><span class="cn">⑤</span><span class="ct">中ぐり盤 鋳物製コラムトップカバーの溶接補修</span><span class="chev" aria-hidden="true"></span></summary>
+  <div class="case-body">
+    <div class="strip" role="list" aria-label="中ぐり盤 鋳物製コラムトップカバーの溶接補修"><figure role="listitem"><img src="p/s21_00.jpg" alt="中ぐり盤 鋳物製コラムトップカバーの溶接補修" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s21_01.jpg" alt="中ぐり盤 鋳物製コラムトップカバーの溶接補修" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s21_02.jpg" alt="中ぐり盤 鋳物製コラムトップカバーの溶接補修" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s21_03.jpg" alt="中ぐり盤 鋳物製コラムトップカバーの溶接補修" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s21_04.jpg" alt="中ぐり盤 鋳物製コラムトップカバーの溶接補修" loading="lazy" decoding="async"></figure></div>
+    <dl><div class="sym"><dt>症状</dt><dd>コラム上部のカバーがクレーンと衝突して割れた</dd></div><div class="cause"><dt>難しさ</dt><dd>バランスウエイト用チェーンのスプロケット受けが付く、強度が必要な部品</dd></div><div class="fix"><dt>対応</dt><dd>TIG溶接＋補強プレートをボルト止め。欠損箇所にはカラーを溶接</dd></div></dl>
+  </div>
+</details>
+<details class="case" id="case6">
+  <summary><img src="p/s22_00.jpg" alt="立旋盤 X軸送りメネジの新作" loading="lazy" decoding="async" class="thumb"><span class="cn">⑥</span><span class="ct">立旋盤 X軸送りメネジの新作</span><span class="chev" aria-hidden="true"></span></summary>
+  <div class="case-body">
+    <div class="strip" role="list" aria-label="立旋盤 X軸送りメネジの新作"><figure role="listitem"><img src="p/s22_00.jpg" alt="立旋盤 X軸送りメネジの新作" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s22_01.jpg" alt="立旋盤 X軸送りメネジの新作" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s22_02.jpg" alt="立旋盤 X軸送りメネジの新作" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s22_03.jpg" alt="立旋盤 X軸送りメネジの新作" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s22_04.jpg" alt="立旋盤 X軸送りメネジの新作" loading="lazy" decoding="async"></figure></div>
+    <dl><div class="fix"><dt>対応</dt><dd>送り軸のメネジと、バックラッシュ除去用のメネジを新作（オネジのさらい加工を含む）</dd></div></dl>
+  </div>
+</details>
+<details class="case" id="case7">
+  <summary><img src="p/s23_00.jpg" alt="大型NC旋盤 主軸モーターとプーリー軸の心出し" loading="lazy" decoding="async" class="thumb"><span class="cn">⑦</span><span class="ct">大型NC旋盤 主軸モーターとプーリー軸の心出し</span><span class="chev" aria-hidden="true"></span></summary>
+  <div class="case-body">
+    <div class="strip" role="list" aria-label="大型NC旋盤 主軸モーターとプーリー軸の心出し"><figure role="listitem"><img src="p/s23_00.jpg" alt="大型NC旋盤 主軸モーターとプーリー軸の心出し" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s23_01.jpg" alt="大型NC旋盤 主軸モーターとプーリー軸の心出し" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s23_02.jpg" alt="大型NC旋盤 主軸モーターとプーリー軸の心出し" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s23_03.jpg" alt="大型NC旋盤 主軸モーターとプーリー軸の心出し" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s23_04.jpg" alt="大型NC旋盤 主軸モーターとプーリー軸の心出し" loading="lazy" decoding="async"></figure></div>
+    <dl><div class="fix"><dt>対応</dt><dd>補修した主軸モーターに交換し、2点受けのプーリー軸受けとモーターの心出しを実施</dd></div></dl>
+  </div>
+</details>
+<details class="case" id="case8">
+  <summary><img src="p/s24_03.jpg" alt="フライス アングルヘッドのベアリング交換" loading="lazy" decoding="async" class="thumb"><span class="cn">⑧</span><span class="ct">フライス アングルヘッドのベアリング交換</span><span class="chev" aria-hidden="true"></span></summary>
+  <div class="case-body">
+    <div class="strip" role="list" aria-label="フライス アングルヘッドのベアリング交換"><figure role="listitem"><img src="p/s24_03.jpg" alt="フライス アングルヘッドのベアリング交換" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s24_02.jpg" alt="フライス アングルヘッドのベアリング交換" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s24_04.jpg" alt="フライス アングルヘッドのベアリング交換" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s24_01.jpg" alt="フライス アングルヘッドのベアリング交換" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s24_00.jpg" alt="フライス アングルヘッドのベアリング交換" loading="lazy" decoding="async"></figure></div>
+    <dl><div class="sym"><dt>症状</dt><dd>アングルヘッド主軸の外径が痩せていた</dd></div><div class="fix"><dt>対応</dt><dd>主軸外径を補修し、ベアリングを交換</dd></div></dl>
+  </div>
+</details>
+<details class="case" id="case9">
+  <summary><img src="p/s25_00.jpg" alt="プレス パッキン類を現行品に適合" loading="lazy" decoding="async" class="thumb"><span class="cn">⑨</span><span class="ct">プレス パッキン類を現行品に適合</span><span class="chev" aria-hidden="true"></span></summary>
+  <div class="case-body">
+    <div class="strip" role="list" aria-label="プレス パッキン類を現行品に適合"><figure role="listitem"><img src="p/s25_00.jpg" alt="プレス パッキン類を現行品に適合" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s25_01.jpg" alt="プレス パッキン類を現行品に適合" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s25_02.jpg" alt="プレス パッキン類を現行品に適合" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s25_03.jpg" alt="プレス パッキン類を現行品に適合" loading="lazy" decoding="async"></figure></div>
+    <dl><div class="sym"><dt>症状</dt><dd>油漏れ。戦時中のものと思われるプレスで、パッキンはなめし革製だった</dd></div><div class="fix"><dt>対応</dt><dd>現行規格のピストンパッキン・ロッドパッキン・ダストシールが入るよう溝を削正・追加して組込み</dd></div></dl>
+  </div>
+</details>
+<details class="case" id="case10">
+  <summary><img src="p/s26_00.jpg" alt="ポーランド製大型旋盤 サドルギヤボックス修理" loading="lazy" decoding="async" class="thumb"><span class="cn">⑩</span><span class="ct">ポーランド製大型旋盤 サドルギヤボックス修理</span><span class="chev" aria-hidden="true"></span></summary>
+  <div class="case-body">
+    <div class="strip" role="list" aria-label="ポーランド製大型旋盤 サドルギヤボックス修理"><figure role="listitem"><img src="p/s26_00.jpg" alt="ポーランド製大型旋盤 サドルギヤボックス修理" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s26_01.jpg" alt="ポーランド製大型旋盤 サドルギヤボックス修理" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s26_02.jpg" alt="ポーランド製大型旋盤 サドルギヤボックス修理" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s26_03.jpg" alt="ポーランド製大型旋盤 サドルギヤボックス修理" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s26_04.jpg" alt="ポーランド製大型旋盤 サドルギヤボックス修理" loading="lazy" decoding="async"></figure></div>
+    <dl><div class="sym"><dt>症状</dt><dd>早送りができない（電磁クラッチが滑る）</dd></div><div class="cause"><dt>原因</dt><dd>ギヤボックス内の潤滑不良（ヘドロでポンプが詰まり）でクラッチに油が届かず、ディスクが摩耗。電圧低下による接点焼け・ベアリング破損も発生</dd></div><div class="fix"><dt>対応</dt><dd>部品交換により復帰</dd></div></dl>
+  </div>
+</details>
+<details class="case" id="case11">
+  <summary><img src="p/s27_04.jpg" alt="環境改善機器（ミストコレクタ）取付工事" loading="lazy" decoding="async" class="thumb"><span class="cn">⑪</span><span class="ct">環境改善機器（ミストコレクタ）取付工事</span><span class="chev" aria-hidden="true"></span></summary>
+  <div class="case-body">
+    <div class="strip" role="list" aria-label="環境改善機器（ミストコレクタ）取付工事"><figure role="listitem"><img src="p/s27_04.jpg" alt="環境改善機器（ミストコレクタ）取付工事" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s27_02.jpg" alt="環境改善機器（ミストコレクタ）取付工事" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s27_03.jpg" alt="環境改善機器（ミストコレクタ）取付工事" loading="lazy" decoding="async"></figure></div>
+    <dl><div class="sym"><dt>課題</dt><dd>切削油の吐出やワーク回転でミストが発生し、作業者の健康に影響</dd></div><div class="fix"><dt>対応</dt><dd>ミストを回収して作業環境を改善。後付け施工の実績多数。主にLOSMA（イタリア）製を採用</dd></div></dl>
+  </div>
+</details>
+</div></section>
+
+<section id="move" class="tone"><div class="wrap">
+  <div class="sec-title" role="heading" aria-level="2">機械移設・設備処分</div>
+  <h2>大型機械の解体・搬出・再据付から、処分まで</h2>
+  <h3>機械移設・レイアウト変更</h3>
+  <div class="strip" role="list" aria-label="機械移設"><figure role="listitem"><img src="p/s14_03.jpg" alt="機械移設" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s13_00.jpg" alt="機械移設" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s14_00.jpg" alt="機械移設" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s14_01.jpg" alt="機械移設" loading="lazy" decoding="async"></figure><figure role="listitem"><img src="p/s14_05.jpg" alt="機械移設" loading="lazy" decoding="async"></figure></div>
+  <h3>設備処分</h3>
+  <p>撤去・搬出・運搬をまとめてお引き受けし、廃棄証明書（弊社書式）も発行します。</p>
+  <div class="strip" role="list" aria-label="設備処分"><figure role="listitem"><img src="p/s15_01.jpg" alt="撤去・搬出" loading="lazy" decoding="async"><figcaption>撤去・搬出</figcaption></figure><figure role="listitem"><img src="p/s15_02.jpg" alt="運搬" loading="lazy" decoding="async"><figcaption>運搬</figcaption></figure><figure role="listitem"><img src="p/s15_04.jpg" alt="廃棄証明書（弊社書式）" loading="lazy" decoding="async"><figcaption>廃棄証明書（弊社書式）</figcaption></figure></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <div class="sec-title" role="heading" aria-level="2">会社概要</div>
+  <h2>新居浜で創業40年余</h2>
+  <p class="philo">私達は<br>安心最適なマシンと高い技術力を提供し<br>お客様の喜びを励みに<br>地域社会の繁栄に貢献いたします。</p>
+  <table><tbody><tr><th scope="row">商号</th><td>株式会社 西原マシンツール</td></tr><tr><th scope="row">代表者</th><td>代表取締役社長 西原 修成</td></tr><tr><th scope="row">創業・設立</th><td>創業 昭和59年／設立 昭和63年</td></tr><tr><th scope="row">所在地</th><td>愛媛県新居浜市多喜浜六丁目5-17</td></tr><tr><th scope="row">社員数</th><td>社員8名・役員2名</td></tr><tr><th scope="row">業務内容</th><td>機械販売・修理・中古機械売買</td></tr><tr><th scope="row">古物商許可</th><td>愛媛県公安委員会 第821020000932号</td></tr></tbody></table>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <div class="sec-title" role="heading" aria-level="2">お問い合わせ</div>
+  <h2>設備のお困りごと、まずはご相談ください</h2>
+  <ul class="needs"><li>部品が手に入らない古い機械を直したい</li><li>加工精度が出ない機械を見てほしい</li><li>工場のレイアウトを変更したい</li><li>使わなくなった設備を売却・処分したい</li></ul>
+  <div class="cline"><span class="k">電話</span><a class="v" href="tel:0897460064">0897-46-0064</a><button class="copy" type="button" data-copy="0897-46-0064">コピー</button></div>
+  <div class="cline"><span class="k">FAX</span><span class="v">0897-46-0566</span></div>
+  <div class="cline"><span class="k">メール</span><span class="v">nmts@dokidoki.ne.jp</span><button class="copy" type="button" data-copy="nmts@dokidoki.ne.jp">コピー</button></div>
+  <div class="cline"><span class="k">担当</span><span class="v">西原 修成</span></div>
+  <p class="addr">株式会社 西原マシンツール<br>愛媛県新居浜市多喜浜六丁目5-17<br><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%84%9B%E5%AA%9B%E7%9C%8C%E6%96%B0%E5%B1%85%E6%B5%9C%E5%B8%82%E5%A4%9A%E5%96%9C%E6%B5%9C%E5%85%AD%E4%B8%81%E7%9B%AE5-17%20%E8%A5%BF%E5%8E%9F%E3%83%9E%E3%82%B7%E3%83%B3%E3%83%84%E3%83%BC%E3%83%AB" target="_blank" rel="noopener">地図を開く</a>　／　<a href="https://nmts.co.jp/" target="_blank" rel="noopener">公式ホームページ</a></p>
+</div></section>
+</main>
+<footer>© 株式会社 西原マシンツール</footer>
+<script>
+document.querySelectorAll(".copy").forEach(b=>b.addEventListener("click",()=>{
+  const t=b.dataset.copy;
+  const done=()=>{b.textContent="コピーしました";setTimeout(()=>b.textContent="コピー",1800)};
+  const fallback=()=>{const r=document.createRange();r.selectNodeContents(b.previousElementSibling);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="選択しました"};
+  try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
+}));
+document.querySelectorAll('a[href^="#case"]').forEach(a=>a.addEventListener("click",()=>{const d=document.querySelector(a.getAttribute("href"));if(d)d.open=true}));
+if(location.hash.startsWith("#case")){const d=document.querySelector(location.hash);if(d)d.open=true}
+</script>
+
+</body>
+</html>
